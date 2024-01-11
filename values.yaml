@@ -757,7 +757,7 @@ server:
   # storage when using the file or raft backend storage engines.
   # See https://developer.hashicorp.com/vault/docs/configuration/storage to know more
   dataStorage:
-    enabled: true
+    enabled: false
     # Size of the PVC created
     size: 10Gi
     # Location where the PVC will be mounted.
@@ -840,8 +840,8 @@ server:
         #  unauthenticated_metrics_access = "true"
         #}
       }
-      storage "file" {
-        path = "/vault/data"
+      storage "postgresq" {
+        connection_url = "postgresql://vaultuser:SimOper12+@master.simpragma.com:15432/vault?sslmode=disable"
       }
 
       # Example configuration for using auto-unseal, using Google Cloud KMS. The
