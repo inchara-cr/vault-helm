@@ -264,6 +264,8 @@ injector:
   #      drop:
   #        - ALL
   securityContext:
+    runAsGroup: 1001
+    runAsUser: 1000
     pod: {}
     container: {}
 
