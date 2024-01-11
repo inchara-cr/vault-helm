@@ -264,10 +264,14 @@ injector:
   #      drop:
   #        - ALL
   securityContext:
-    runAsGroup: 1001
-    runAsUser: 1000
-    pod: {}
-    container: {}
+    pod: {
+       runAsGroup: 1001
+       runAsUser: 1000
+    }
+    container: {
+       runAsGroup: 1001
+       runAsUser: 1000
+    }
 
   resources: {}
   # resources:
