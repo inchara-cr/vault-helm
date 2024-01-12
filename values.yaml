@@ -252,7 +252,7 @@ injector:
     certName: tls.crt
     keyName: tls.key
 
-  # Security context for the pod template and the injector container
+   Security context for the pod template and the injector container
   # The default pod securityContext is:
   #   runAsNonRoot: true
   #   runAsGroup: {{ .Values.injector.gid | default 1000 }}
