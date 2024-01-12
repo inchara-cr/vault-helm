@@ -264,12 +264,12 @@ injector:
   #      drop:
   #        - ALL
   securityContext:
-    runAsRoot: 0
+    runAsNonRoot: false
     pod: {
-       runAsRoot: 0
+       runAsNonRoot: false
     }
     container: {
-       runAsRoot: 0
+       runAsNonRoot: false
         }
 
   resources: {}
