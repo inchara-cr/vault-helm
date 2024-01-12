@@ -263,14 +263,18 @@ injector:
   #    capabilities:
   #      drop:
   #        - ALL
-  securityContext:
-    runAsNonRoot: false
-    pod: {
-       runAsNonRoot: false
-    }
-    container: {
-       runAsNonRoot: false
-        }
+  securityContext: 
+    runAsUser: 0
+    runAsGroup: 0
+    pod: 
+       securityContext:
+         runAsUser: 0
+         runAsGroup: 0
+    container: 
+       securityContext:
+         runAsUser: 0
+         runAsGroup: 0
+        
 
   resources: {}
   # resources:
