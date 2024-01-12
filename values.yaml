@@ -264,7 +264,7 @@ injector:
   #      drop:
   #        - ALL
   securityContext: 
-           if runAsUser: 0
+    runAsUser: 0
     runAsGroup: 0
     pod: 
        securityContext:
